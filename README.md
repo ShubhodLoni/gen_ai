@@ -1,3 +1,3 @@
-### This is my learnings in GEN-AI 
+### These are my learnings in GEN-AI 
 ### Learning Langchain, RAG, Langgraph frameworks from scratch 
-### 
+
