@@ -84,16 +84,21 @@ if not st.session_state.docs:
             process_document(path)
             st.rerun()
 
-
 #chat UI
 if st.session_state.docs and st.session_state.agent:
+    for message in st.session_state.messages:
+        role = message.get("role")
+        content =  message.get("content")
+        st.chat_message(role).markdown(content)
     query = st.chat_input("Ask anything related to document uploaded")
     if query:
+        st.session_state.messages.append({"role":"user","content":query})
         st.chat_message("user").markdown(query)
         response = st.session_state.agent.invoke(
             {"messages":[{"role":"user", "content":query}]},
-            {"configurable":{"thread_id":1}}
+            {"configurable":{"thread_id":"1"}}
         )
 
         answer = response["messages"][-1].content
         st.chat_message("ai").markdown(answer)
+        st.session_state.messages.append({"role":"ai","content":query})
