@@ -11,3 +11,4 @@ sentence-transformers
 langchain-tools
 langgraph
 PyDantic
+IPython
