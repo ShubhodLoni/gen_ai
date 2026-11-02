@@ -54,25 +54,6 @@ This repository documents my learning journey, experiments, implementations, and
 - VS Code
 - Git & GitHub
 
-## 📂 Repository Structure
-
-```text
-gen_ai/
-│
-├── notebooks/
-│   ├── langchain/
-│   ├── langgraph/
-│   └── rag/
-│
-├── projects/
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
-*Repository structure will evolve as I continue learning and adding implementations.*
-
 ## 🎯 Learning Goals
 
 - Develop a deeper understanding of LLM architectures and applications.
